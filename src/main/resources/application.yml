@@ -1,0 +1,8 @@
+spring:
+  applicaiton:
+    name: workshop-platform-api
+  profiles:
+    active: dev
+
+server:
+  port: 8080
