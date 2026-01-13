@@ -45,12 +45,15 @@ Built with Spring Boot and PostgreSQL using best practices: Flyway migrations, s
 - Java (recommended: 21)
 - Docker & Docker Compose
 
-### 1) Start PostgreSQL
+
+
+### Start PostgreSQL
 ```bash
 docker compose up -d
 docker compose ps
+```
 
-### 2) Configure Environment Variables
+### Configure Environment Variables
 
 This project reads database credentials from environment variables.  
 An example `.env` file is kept locally and **must not be committed** to version control.
@@ -61,19 +64,23 @@ Export variables into your shell session:
 set -a
 source .env
 set +a
+```
 
-### 3) Run the application
+### Run the application
 ```bash
 ./mvnw spring-boot:run
+```
 
-### 4) Verify
+### Verify
 Health endpoint:
 ```bash
 curl -i http://localhost:8080/api/v1/health
+```
 
-### 5) Stop PostgreSQL (optional)
+### Stop PostgreSQL (optional)
 ```bash
 docker compose down
+```
 
 ### Database
 - PostgreSQL runs in Docker
